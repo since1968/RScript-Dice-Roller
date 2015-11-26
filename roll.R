@@ -12,8 +12,8 @@ args <- commandArgs(trailingOnly = TRUE)
 modifier <- 0
 
 sprintf("You rolled:")
-monster <- sample(1:as.numeric(args[2]), as.numeric(args[1]), replace = T)
-monster
+roll <- sample(1:as.numeric(args[2]), as.numeric(args[1]), replace = T)
+roll
 
 
 # check for optional third argument, otherwise just sum the rolls
@@ -21,5 +21,5 @@ if(!is.na(args[3])) {
 	modifier <- as.numeric(args[3])
 	}
 
-monster <- sum(monster) + modifier
-sprintf("Your total: %s", monster)
+roll <- sum(roll) + modifier
+sprintf("Your total: %s", roll)
