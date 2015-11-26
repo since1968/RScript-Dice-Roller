@@ -1,11 +1,19 @@
 # roll.R
 # Rolls a specified number of dice and outputs to command line
-
-# usage:
-# To roll 3d6
-# Rscript roll.R 3 6
-# To roll 3d6+5 include optional third argument:
-# Rscript roll.R 3 6 5
+# 
+# Args:
+#	x: The number of dice to roll. A number.
+# 	y: The number of sides on each die. A number.
+#	z: The modifier to add to the sum. A number. Optional.
+#
+# Returns:
+#	The z plus sum of a y-sided dice, rolled x times.
+#
+# Usage:
+#	To simulate 3d6
+#	Rscript roll.R 3 6
+#	To simulate 3d6+5
+#	Rscript roll.R 3 6 5
 
 args <- commandArgs(trailingOnly = TRUE)
 # assume there's no modifier
